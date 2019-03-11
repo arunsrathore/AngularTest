@@ -1,0 +1,25 @@
+<div class="home-page inner-page">
+    <div class="back-button">
+        <div class="btn-back">
+            <a (click)  = "back()">Back</a>
+        </div>
+    </div>
+    <h3 style = "color:#fff; text-align:center;">
+        Albums
+    </h3>
+    <div class="album">
+        <div class="albums">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6" *ngFor = "let album of albums" >
+                        <div class="user-album" >
+                            <h3>
+                                <a  routerLink = "/photos/{{album.id}}">{{album.title}}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

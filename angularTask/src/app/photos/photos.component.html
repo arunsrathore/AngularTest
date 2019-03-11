@@ -1,0 +1,23 @@
+<div class="home-page inner-page">
+  <div class="back-button">
+      <div class="btn-back">
+          <a (click)  = "back()">Back</a>
+      </div>
+  </div>
+  <h3 style = "color:#fff; text-align:center;">
+    photos
+</h3>
+  <div class="album">
+      <div class="albums">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-12" *ngFor = "let photo of photos; let i=index ">
+                      <div class="users-album" *ngIf="i<5">
+                              <img src="{{photo.url}}" alt="images" class="img-responsive" >
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
